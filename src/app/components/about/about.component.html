@@ -1,0 +1,87 @@
+<section class="about section" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- LEFT: Bio + Experience -->
+      <div class="about-left fade-up">
+        <span class="section-tag">Sobre Mim</span>
+        <h2 class="section-title">Quem sou eu</h2>
+        <div class="divider"></div>
+
+        <p class="about-bio">
+          Sou um profissional de tecnologia em transição e especialização para a área de Dados, atualmente
+          cursando <strong>Tecnologia em Sistemas Inteligentes</strong> na
+          <strong>FATEC Pompeia</strong> (previsão: Dez/2027). Tenho forte base em desenvolvimento
+          Full-Stack e aplico metodologias ativas de aprendizado. Gosto de resolver problemas complexos
+          arquitetando bancos de dados e criando fluxos de ETL eficientes.
+        </p>
+
+        <!-- Education -->
+        <div class="about-education">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <p class="edu-title">Tecnologia em Sistemas Inteligentes</p>
+            <p class="edu-sub">FATEC Pompeia &nbsp;·&nbsp; Previsão: Dez/2027</p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <h3 class="timeline-heading">Experiência</h3>
+        <div class="timeline">
+          @for (exp of experience; track exp.company) {
+            <div class="timeline-item">
+              <div class="timeline-dot" [class.current]="exp.current"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <span class="timeline-role">{{ exp.role }}</span>
+                  @if (exp.current) {
+                    <span class="timeline-badge">Atual</span>
+                  }
+                </div>
+                <p class="timeline-company">{{ exp.company }}</p>
+                <p class="timeline-period">{{ exp.period }}</p>
+                <p class="timeline-desc">{{ exp.desc }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- RIGHT: Skills -->
+      <div class="about-right fade-up">
+        <h3 class="skills-heading">Habilidades Técnicas</h3>
+
+        <div class="skills-list">
+          @for (skill of skills; track skill.name) {
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-pct">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div
+                  class="skill-fill"
+                  [style.width]="animatedSkills() ? skill.level + '%' : '0%'"
+                ></div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- Tech badges -->
+        <div class="tech-badges">
+          <span class="tech-badge">🐍 Python</span>
+          <span class="tech-badge">☕ Java</span>
+          <span class="tech-badge">🅰️ Angular</span>
+          <span class="tech-badge">🐳 Docker</span>
+          <span class="tech-badge">🗄️ MySQL</span>
+          <span class="tech-badge">🍃 MongoDB</span>
+          <span class="tech-badge">📊 Metabase</span>
+          <span class="tech-badge">⚙️ Spring Boot</span>
+          <span class="tech-badge">🔄 ETL</span>
+          <span class="tech-badge">🔍 SQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

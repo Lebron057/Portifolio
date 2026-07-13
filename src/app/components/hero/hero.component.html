@@ -1,0 +1,81 @@
+<section class="hero section" id="home">
+  <!-- Background glow -->
+  <div class="hero-glow"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="container hero-container">
+    <!-- Text Content -->
+    <div class="hero-content">
+      <p class="hero-greeting">Olá, eu sou</p>
+      <h1 class="hero-name">Iago Amorim<br><span>Lebron de Lima</span></h1>
+
+      <div class="hero-typing-wrap">
+        <span class="hero-typing-text">{{ displayedText() }}</span>
+        <span class="hero-cursor">|</span>
+      </div>
+
+      <p class="hero-bio">
+        Profissional de tecnologia especializado em Dados &amp; Full-Stack. Transformo dados brutos em insights
+        e ideias em produtos digitais robustos.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="btn-hire" (click)="scrollTo('#contact')">
+          Contrate-me
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </button>
+        <a class="btn btn-outline" id="btn-cv" href="assets/Curriculo.pdf" download>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Baixar CV
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Projetos Concluídos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Tecnologias</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Experiências</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="hero-avatar-wrap">
+      <div class="hero-avatar-ring"></div>
+      <div class="hero-avatar">
+        <div class="avatar-initials">IA</div>
+      </div>
+      <!-- Floating badges -->
+      <div class="hero-badge badge-top">
+        <span>💼</span> Open to Work
+      </div>
+      <div class="hero-badge badge-bottom">
+        <span>🎓</span> FATEC Pompeia
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint">
+    <div class="scroll-dot"></div>
+  </div>
+</section>

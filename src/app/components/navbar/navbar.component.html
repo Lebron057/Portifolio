@@ -1,0 +1,34 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a class="nav-logo" (click)="scrollTo('#home')" role="button" tabindex="0">
+      <span class="logo-bracket">&lt;</span>Iago Amorim<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links" [class.open]="menuOpen()">
+      @for (link of navLinks; track link.label) {
+        <li>
+          <a class="nav-link" (click)="scrollTo(link.anchor)" role="button" tabindex="0">
+            {{ link.label }}
+          </a>
+        </li>
+      }
+      <li>
+        <a class="btn btn-outline nav-cv" href="/public/assets/Curriculo.pdf" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Baixar CV
+        </a>
+      </li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

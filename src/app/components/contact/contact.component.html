@@ -1,0 +1,138 @@
+<section class="contact section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Contato</span>
+      <h2 class="section-title">Vamos conversar?</h2>
+      <p class="section-subtitle">
+        Tem um projeto em mente ou quer trocar uma ideia? Envie uma mensagem!
+      </p>
+      <br>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Form -->
+      <!-- <div class="contact-form-wrap">
+        @if (!submitted()) {
+          <form class="contact-form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input id="name" type="text" name="name" [(ngModel)]="formData.name"
+                       placeholder="Seu nome completo" required />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" name="email" [(ngModel)]="formData.email"
+                       placeholder="seu@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input id="phone" type="tel" name="phone" [(ngModel)]="formData.phone"
+                       placeholder="(00) 00000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="service">Serviço de Interesse</label>
+                <select id="service" name="service" [(ngModel)]="formData.service">
+                  <option value="" disabled selected>Selecione um serviço</option>
+                  @for (s of services; track s) {
+                    <option [value]="s">{{ s }}</option>
+                  }
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Detalhes da Mensagem</label>
+              <textarea id="message" name="message" [(ngModel)]="formData.message"
+                        rows="5" placeholder="Descreva seu projeto ou dúvida..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit" [disabled]="sending()">
+              @if (sending()) {
+                <span class="spinner"></span> Enviando...
+              } @else {
+                Enviar Mensagem
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              }
+            </button>
+          </form>
+        } @else {
+          <div class="contact-success">
+            <div class="success-icon">✓</div>
+            <h3>Mensagem Enviada!</h3>
+            <p>Obrigado pelo contato. Retornarei em breve.</p>
+            <button class="btn btn-outline" (click)="reset()">Enviar outra mensagem</button>
+          </div>
+        }
+      </div> -->
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h3>Informações de Contato</h3>
+
+        <a class="contact-item" href="mailto:iagoamorim057@gmail.com" id="link-email">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-item-label">E-mail</p>
+            <p class="contact-item-value">iagoamorim057&#64;gmail.com</p>
+          </div>
+        </a>
+
+        <a class="contact-item" href="https://linkedin.com/in/iago-lebron" target="_blank" id="link-linkedin">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-item-label">LinkedIn</p>
+            <p class="contact-item-value">linkedin.com/in/iago-lebron</p>
+          </div>
+        </a>
+
+        <a class="contact-item" href="https://github.com/Lebron057" target="_blank" id="link-github">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact-item-label">GitHub</p>
+            <p class="contact-item-value">github.com/Lebron057</p>
+          </div>
+        </a>
+
+        <div class="contact-availability">
+          <div class="availability-dot"></div>
+          <span>Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">
+      <span class="logo-bracket">&lt;</span>Iago Amorim<span class="logo-bracket">/&gt;</span>
+    </span>
+    <p class="footer-text">Desenvolvido por <strong>Iago Amorim</strong> &mdash; 2026</p>
+    <div class="footer-links">
+      <a href="https://github.com/Lebron057" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/iago-lebron" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>

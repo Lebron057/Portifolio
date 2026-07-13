@@ -1,0 +1,49 @@
+<section class="portfolio section" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Meus Trabalhos</span>
+      <h2 class="section-title">Portfólio de Projetos</h2>
+      <p class="section-subtitle">
+        Uma seleção de projetos que demonstram minhas habilidades em dados, back-end e inovação.
+      </p>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-bar" role="tablist">
+      @for (f of filters; track f.value) {
+        <button
+          class="filter-btn"
+          [class.active]="activeFilter() === f.value"
+          (click)="setFilter(f.value)"
+          role="tab"
+          [attr.aria-selected]="activeFilter() === f.value"
+          [id]="'filter-' + f.value"
+        >
+          {{ f.label }}
+        </button>
+      }
+    </div>
+
+    <!-- Project Grid -->
+    <div class="projects-grid">
+      @for (project of filteredProjects; track project.title) {
+        <div class="project-card">
+          <!-- Card Visual -->
+          <div class="project-visual" [style.background]="project.gradient">
+            <span class="project-emoji">{{ project.icon }}</span>
+          </div>
+          <!-- Card Body -->
+          <div class="project-body">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-desc">{{ project.desc }}</p>
+            <div class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
