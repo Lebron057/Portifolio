@@ -2,8 +2,6 @@ import {
   Component,
   OnInit,
   OnDestroy,
-  ElementRef,
-  AfterViewInit,
   signal
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,24 +13,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
-export class HeroComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HeroComponent implements OnInit, OnDestroy {
   displayedText = signal('');
   private titles = [
-    'Data Analyst Intern',
-    'Desenvolvedor Full-Stack',
-    'Estudante de Sistemas Inteligentes'
+    'Estudante de Sistemas Inteligentes',
+    'Análise de Dados & BI',
+    'Engenharia de Dados (ETL)',
+    'Generative AI & LLMs'
   ];
   private titleIndex = 0;
   private charIndex = 0;
   private isDeleting = false;
   private timeoutRef: ReturnType<typeof setTimeout> | null = null;
-  showCursor = signal(true);
 
   ngOnInit() {
     this.typeLoop();
   }
-
-  ngAfterViewInit() {}
 
   ngOnDestroy() {
     if (this.timeoutRef) clearTimeout(this.timeoutRef);
@@ -58,7 +54,7 @@ export class HeroComponent implements OnInit, OnDestroy, AfterViewInit {
         this.titleIndex = (this.titleIndex + 1) % this.titles.length;
       }
     }
-    const speed = this.isDeleting ? 60 : 100;
+    const speed = this.isDeleting ? 50 : 90;
     this.timeoutRef = setTimeout(() => this.typeLoop(), speed);
   }
 

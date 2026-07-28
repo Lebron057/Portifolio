@@ -14,9 +14,11 @@ export class NavbarComponent {
 
   navLinks = [
     { label: 'Home', anchor: '#home' },
-    { label: 'Serviços', anchor: '#services' },
     { label: 'Sobre Mim', anchor: '#about' },
-    { label: 'Portfólio', anchor: '#portfolio' },
+    { label: 'Experiência', anchor: '#experience' },
+    { label: 'Projetos', anchor: '#portfolio' },
+    { label: 'Competências', anchor: '#skills' },
+    { label: 'Formação', anchor: '#education' },
     { label: 'Contato', anchor: '#contact' },
   ];
 

@@ -1,0 +1,43 @@
+<section class="skills section" id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Expertise &amp; Ferramentas</span>
+      <h2 class="section-title">Competências Técnicas</h2>
+      <p class="section-subtitle">
+        Conhecimentos organizados por domínio técnico, com especialidade em ecossistemas de Dados, Business Intelligence e ETL.
+      </p>
+    </div>
+
+    <div class="skills-categories-grid">
+      @for (cat of categories; track cat.title) {
+        <div class="skill-category-card fade-up" [class.featured-card]="cat.featured">
+          @if (cat.featured) {
+            <div class="featured-badge">⭐ Especialidade Principal</div>
+          }
+
+          <div class="category-header">
+            <span class="category-icon">{{ cat.icon }}</span>
+            <div>
+              <h3 class="category-title">{{ cat.title }}</h3>
+              <p class="category-subtitle">{{ cat.subtitle }}</p>
+            </div>
+          </div>
+
+          <div class="badges-grid">
+            @for (skill of cat.skills; track skill.name) {
+              <div class="skill-badge-item">
+                <span class="skill-badge-icon">{{ skill.icon }}</span>
+                <div class="skill-badge-info">
+                  <span class="skill-badge-name">{{ skill.name }}</span>
+                  @if (skill.level) {
+                    <span class="skill-badge-level">{{ skill.level }}</span>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

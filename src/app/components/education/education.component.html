@@ -1,0 +1,69 @@
+<section class="education section" id="education">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Aprendizado &amp; Qualificações</span>
+      <h2 class="section-title">Formação &amp; Certificações</h2>
+      <p class="section-subtitle">
+        Graduação acadêmica em Sistemas Inteligentes, programas de especialização contínua e certificações em dados e tecnologia.
+      </p>
+    </div>
+
+    <div class="education-grid">
+      <!-- Left Column: Academic + Language -->
+      <div class="edu-left">
+        <!-- Academic Degree Card -->
+        <div class="academic-card fade-up">
+          <div class="academic-icon-wrap">
+            <span class="academic-icon">{{ academicDegree.icon }}</span>
+          </div>
+          <div class="academic-info">
+            <span class="academic-status-badge">{{ academicDegree.status }}</span>
+            <h3 class="academic-title">{{ academicDegree.title }}</h3>
+            <p class="academic-institution">{{ academicDegree.institution }}</p>
+            <p class="academic-completion">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              {{ academicDegree.completion }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Language Card -->
+        <div class="language-card fade-up">
+          <div class="lang-header">
+            <span class="lang-icon">🌐</span>
+            <div>
+              <h4 class="lang-name">Idiomas</h4>
+              <p class="lang-level">{{ language.name }}: {{ language.level }}</p>
+            </div>
+          </div>
+          <p class="lang-desc">{{ language.desc }}</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Certifications List -->
+      <div class="edu-right">
+        <h3 class="certs-heading">Cursos &amp; Certificações</h3>
+        
+        <div class="certs-list">
+          @for (cert of certifications; track cert.name) {
+            <div class="cert-item fade-up">
+              <div class="cert-header">
+                <h4 class="cert-name">{{ cert.name }}</h4>
+                <span class="cert-status" [class.completed]="cert.status.includes('Concluído')">
+                  {{ cert.status }}
+                </span>
+              </div>
+              <p class="cert-institution">{{ cert.institution }}</p>
+              @if (cert.details) {
+                <p class="cert-details">{{ cert.details }}</p>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
